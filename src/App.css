@@ -1,38 +1,183 @@
-.App {
-  text-align: center;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    font-family: "Montserrat", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.topbar-cont {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    background: url("./images/showcase.jpg") no-repeat center center/cover;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.overlay a {
+    text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.overlay h1 {
+    font-family: "Montserrat Subrayada", sans-serif;
+    font-size: 3em;
+    color: #fff;
+}
+
+.search-form {
+    margin: 28px 0 54px 0;
+}
+
+.search-form input {
+    padding: 10px 14px;
+    border-radius: 6px 0 0 6px;
+    border: none;
+    font-size: 1.1em;
+    min-width: 340px;
+    outline: none;
+}
+
+.search-form input::placeholder {
+    font-size: 0.8em;
+}
+
+.search-form button {
+    padding: 10px 14px;
+    border-radius: 0 6px 6px 0;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1.1em;
+    outline: none;
+}
+
+.search-form button:hover,
+.search-form button:active {
+    background-color: rgb(37, 206, 164);
+    color: #fff;
+}
+
+.links button {
+    margin: 0 8px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.links button:hover,
+.links button:active {
+    background-color: rgb(37, 206, 164);
+    color: #fff;
+}
+
+.query-text {
+    text-align: center;
+    padding: 42px 0 12px 0;
+}
+
+.image-container {
+    max-width: 100%;
+    padding: 32px 80px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 32px;
+}
+
+.imgitem-cont {
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.image-item {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 6px;
+    transition: all 0.4s ease-out;
+    object-fit: cover;
+}
+
+.image-item:hover {
+    transform: scale(1.2);
+}
+
+.big-img-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 110px 64px;
+}
+
+.back-link {
+    position: absolute;
+    top: -80px;
+    left: 60px;
+    border: 1px solid #aaa;
+    padding: 8px 14px;
+    text-decoration: none;
+    color: black;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.download-link {
+    background-color: #fff;
+    border: 1px solid #aaa;
+    padding: 8px 14px;
+    text-decoration: none;
+    color: black;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.back-link:hover,
+.download-link:hover {
+    border-color: rgb(37, 206, 164);
+    background-color: rgb(37, 206, 164);
+    color: #fff;
+}
+
+.big-img-cont img {
+    border-radius: 6px;
+}
+
+.img-info {
+    width: 100%;
+    padding: 0 60px 40px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img-info .desc {
+    margin-bottom: 14px;
+}
+
+.copy-text {
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
 }
